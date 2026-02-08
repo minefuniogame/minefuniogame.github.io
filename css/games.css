@@ -490,6 +490,6 @@ section:nth-child(odd) {
   align-items: center;
   margin-top: 10px;
 }
-.game-info { 
-  font-size: 30px !important;
+.game-name { 
+  font-size: 30px ;
 }

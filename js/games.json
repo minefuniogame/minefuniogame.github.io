@@ -6,5 +6,21 @@
     "rating": 4.7,
     "players": 1800,
     "gradient": "linear-gradient(45deg,#7f7cff,#5ee7df)"
+  },
+  {
+    "title": "Voxiom.io",
+    "link": "game/voxiom-io/",
+    "thumbnail": "images/voxiom-io-cover.png",
+    "rating": 4.6,
+    "players": 1500,
+    "gradient": "linear-gradient(45deg,#ff9966,#ff5e62)"
+  },
+  {
+    "title": "Paper.io 2",
+    "link": "game/paper-io-2/",
+    "thumbnail": "images/paper-io-2-cover.png",
+    "rating": 4.5,
+    "players": 5200,
+    "gradient": "linear-gradient(45deg,#56ccf2,#2f80ed)"
   }
 ]

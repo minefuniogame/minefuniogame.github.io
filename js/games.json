@@ -30,5 +30,13 @@
     "rating": 4.5,
     "players": 5200,
     "gradient": "linear-gradient(45deg,#56ccf2,#2f80ed)"
+  },
+{
+    "title": "Zombs.io",
+    "link": "/game/zombs-io/",
+    "thumbnail": "images/zombs-io-cover.png",
+    "rating": 4.4,
+    "players": 2100,
+    "gradient": "linear-gradient(45deg,#11998e,#38ef7d)"
   }
 ]

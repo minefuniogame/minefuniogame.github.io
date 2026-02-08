@@ -38,5 +38,13 @@
     "rating": 4.4,
     "players": 2100,
     "gradient": "linear-gradient(45deg,#11998e,#38ef7d)"
+  },
+  {
+    "title": "Krunker.io",
+    "link": "game/krunker-io/",
+    "thumbnail": "images/krunker-io-cover.jpg",
+    "rating": 4.6,
+    "players": 4600,
+    "gradient": "linear-gradient(45deg,#ee0979,#ff6a00)"
   }
 ]

@@ -1,0 +1,10 @@
+[
+  {
+    "title": "Magikmon",
+    "link": "game/magikmon/",
+    "thumbnail": "images/magikmon.jpg",
+    "rating": 4.8,
+    "players": 1200,
+    "gradient": "linear-gradient(45deg,#f06,#48f)"
+  }
+]

@@ -491,5 +491,5 @@ section:nth-child(odd) {
   margin-top: 10px;
 }
 .game-name { 
-  font-size: 30px ;
+  font-size: 30px !important;
 }

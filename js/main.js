@@ -52,3 +52,15 @@ document.addEventListener("DOMContentLoaded", () => {
   loadGames(); // call async function
 
 });
+
+  function addFavIconToPages(){
+  const link = document.createElement('link');
+  link.rel = 'icon';
+  link.href = '/images/minefuniogame-logo.png';
+  link.type = 'image/png';
+
+  // Append it to the head
+  document.head.appendChild(link);
+
+  }
+addFavIconToPages()

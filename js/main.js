@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
         card.dataset.title = game.title.toLowerCase(); // for search
         card.onclick = () => window.location.href = link;
 
-        if (!url.includes(link)){
+        if (!url.includes(link) && game.title != "MineFun Io Game"){
 
         card.innerHTML = `
           <div class="game-thumb" style="background: ${game.gradient || 'gray'};">

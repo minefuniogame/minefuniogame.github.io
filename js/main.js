@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 addFavIconToPages()
 
-(function () {
+function addAnalyticsScript() {
   const script = document.createElement('script');
   script.src = "https://analytics.ahrefs.com/analytics.js";
   script.async = true;
@@ -77,4 +77,5 @@ addFavIconToPages()
 
   document.head.appendChild(script);
   console.log("Ahrefs Analytics loaded ✅");
-})();
+};
+addAnalyticsScript()

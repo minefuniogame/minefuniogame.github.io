@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // 1. Fetch games JSON w create cards
   const loadGames = async () => {
+    const url = window.location.href;
     try {
       const res = await fetch('/js/games.json');
       if (!res.ok) throw new Error("Cannot fetch games.json");
@@ -23,6 +24,8 @@ document.addEventListener("DOMContentLoaded", () => {
         card.dataset.title = game.title.toLowerCase(); // for search
         card.onclick = () => window.location.href = link;
 
+        // if ()
+        console.log(url.includes(link), "jjjjjjjjjj")
         card.innerHTML = `
           <div class="game-thumb" style="background: ${game.gradient || 'gray'};">
             <img src="${game.thumbnail}" alt="${game.title}">

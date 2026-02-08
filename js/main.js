@@ -24,8 +24,8 @@ document.addEventListener("DOMContentLoaded", () => {
         card.dataset.title = game.title.toLowerCase(); // for search
         card.onclick = () => window.location.href = link;
 
-        // if ()
-        console.log(url.includes(link), "jjjjjjjjjj")
+        if (!url.includes(link)){
+
         card.innerHTML = `
           <div class="game-thumb" style="background: ${game.gradient || 'gray'};">
             <img src="${game.thumbnail}" alt="${game.title}">
@@ -36,6 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
           </div>
         `;
         grid.appendChild(card);
+        }
       });
 
       // 2. Search function (after cards loaded)

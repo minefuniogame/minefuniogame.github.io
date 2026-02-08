@@ -68,3 +68,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   }
 addFavIconToPages()
+
+ // Google Search Console verification meta
+  (function() {
+    const meta = document.createElement('meta');
+    meta.name = "google-site-verification";
+    meta.content = "3Dz6V5aK3GKHV69Wwk7tOQNVPF3PherTLglSMMlqSo0"; // <-- بدّلها بالـ code ديالك
+    document.head.appendChild(meta);
+    console.log("GSC meta tag added to head ✅");
+  })();

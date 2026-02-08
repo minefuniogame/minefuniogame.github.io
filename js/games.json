@@ -1,10 +1,10 @@
 [
   {
-    "title": "Magikmon",
-    "link": "game/magikmon/",
-    "thumbnail": "images/magikmon.jpg",
-    "rating": 4.8,
-    "players": 1200,
-    "gradient": "linear-gradient(45deg,#f06,#48f)"
+    "title": "Bloxd.io",
+    "link": "game/bloxd-io/",
+    "thumbnail": "images/bloxd-io-cover.png",
+    "rating": 4.7,
+    "players": 1800,
+    "gradient": "linear-gradient(45deg,#7f7cff,#5ee7df)"
   }
 ]

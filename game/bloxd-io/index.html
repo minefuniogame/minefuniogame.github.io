@@ -252,7 +252,7 @@
     <p>As the game continues to grow, it serves as a reminder that great gaming doesn't require expensive hardware—only a great community and a world limited only by your own creativity. Jump into the world of <strong>Bloxd Io</strong> today and see why it is hailed as an enduring masterpiece of the modern web.</p>
   </section>
 
-
+ <div class="games-grid" id="gamesGrid"></div>
 
 <footer></footer>
 
@@ -261,7 +261,51 @@
 <script src="/js/include-header-footer.js"></script>
 <script src="/js/main.js"></script>
 <script src="/js/vote.js"></script>
+<script>
+  const loadGames = async () => {
+  try {
+    const res = await fetch('/js/games.json');
+    if (!res.ok) throw new Error("Cannot fetch games.json");
 
+    const games = await res.json();
+    const grid = document.getElementById('gamesGrid');
+    grid.innerHTML = '';
+
+    // 🧠 current page filename
+    const currentPage = window.location.pathname.split('/').pop();
+
+    games.forEach(game => {
+      if (!game.link) return;
+
+      // 🧠 game page filename
+      const gamePage = game.link.split('/').pop();
+
+      // ❌ skip current game
+      if (gamePage === currentPage) return;
+
+      const card = document.createElement('div');
+      card.className = 'game-card';
+      card.dataset.title = game.title.toLowerCase();
+      card.onclick = () => window.location.href = game.link;
+
+      card.innerHTML = `
+        <div class="game-thumb" style="background:${game.gradient || 'gray'};">
+          <img src="${game.thumbnail}" alt="${game.title}">
+        </div>
+        <div class="game-info">
+          <h3>${game.title}</h3>
+        </div>
+      `;
+
+      grid.appendChild(card);
+    });
+
+  } catch (err) {
+    console.error(err);
+  }
+};
+
+</script>
 </body>
 </html>
 

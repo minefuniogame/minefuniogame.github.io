@@ -69,3 +69,12 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 addFavIconToPages()
 
+(function () {
+  const script = document.createElement('script');
+  script.src = "https://analytics.ahrefs.com/analytics.js";
+  script.async = true;
+  script.setAttribute("data-key", "gL4UsWMum3rQnngrtTGomQ"); // 🔴 حط key ديالك هنا
+
+  document.head.appendChild(script);
+  console.log("Ahrefs Analytics loaded ✅");
+})();

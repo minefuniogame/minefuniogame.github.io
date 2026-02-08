@@ -259,10 +259,10 @@
 <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
 <script src="/js/include-header-footer.js"></script>
-<script src="/js/main.js"></script>
+<!-- <script src="/js/main.js"></script> -->
 <script src="/js/vote.js"></script>
 <script>
-  const loadGames = async () => {
+const loadGames = async () => {
   try {
     const res = await fetch('/js/games.json');
     if (!res.ok) throw new Error("Cannot fetch games.json");
@@ -271,18 +271,22 @@
     const grid = document.getElementById('gamesGrid');
     grid.innerHTML = '';
 
-    // 🧠 current page filename
-    const currentPage = window.location.pathname.split('/').pop();
+    // 🔑 slug ديال الصفحة الحالية
+    const pathParts = window.location.pathname.split('/').filter(Boolean);
+    const currentSlug = pathParts[pathParts.length - 1];
 
     games.forEach(game => {
       if (!game.link) return;
 
-      // 🧠 game page filename
-      const gamePage = game.link.split('/').pop();
-      console.log("this page" + currentPage)
-      console.log("json page" + gamePage)
-      // ❌ skip current game
-      if (gamePage === currentPage) return;
+      // 🔑 slug ديال اللعبة من JSON
+      const gameSlug = game.link
+        .replace('./', '')
+        .split('/')
+        .filter(Boolean)
+        .pop();
+
+      // ❌ حيد اللعبة الحالية
+      if (gameSlug === currentSlug) return;
 
       const card = document.createElement('div');
       card.className = 'game-card';

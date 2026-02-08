@@ -68,5 +68,4 @@ document.addEventListener("DOMContentLoaded", () => {
 
   }
 addFavIconToPages()
-<script src="https://analytics.ahrefs.com/analytics.js" data-key="gL4UsWMum3rQnngrtTGomQ" async></script>
 

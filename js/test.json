@@ -1,0 +1,82 @@
+[
+  {
+    "title": "Bloxd.io",
+    "link": "game/bloxd-io/",
+    "thumbnail": "images/bloxd-io-cover.jpg",
+    "rating": 4.7,
+    "players": 1800,
+    "gradient": "linear-gradient(45deg,#7f7cff,#5ee7df)"
+  },
+  {
+    "title": "Voxiom.io",
+    "link": "game/voxiom-io/",
+    "thumbnail": "images/voxiom-io-cover.jpg",
+    "rating": 4.6,
+    "players": 1500,
+    "gradient": "linear-gradient(45deg,#ff9966,#ff5e62)"
+  },
+  {
+    "title": "Paper.io 2",
+    "link": "game/paper-io-2/",
+    "thumbnail": "images/paper-io-2-cover.jpg",
+    "rating": 4.5,
+    "players": 5200,
+    "gradient": "linear-gradient(45deg,#56ccf2,#2f80ed)"
+  },
+  {
+    "title": "Zombs.io",
+    "link": "game/zombs-io/",
+    "thumbnail": "images/zombs-io-cover.jpg",
+    "rating": 4.4,
+    "players": 2100,
+    "gradient": "linear-gradient(45deg,#11998e,#38ef7d)"
+  },
+  {
+    "title": "Moomoo.io",
+    "link": "game/moomoo-io/",
+    "thumbnail": "images/moomoo-io-cover.jpg",
+    "rating": 4.3,
+    "players": 1900,
+    "gradient": "linear-gradient(45deg,#f7971e,#ffd200)"
+  },
+  {
+    "title": "Krunker.io",
+    "link": "game/krunker-io/",
+    "thumbnail": "images/krunker-io-cover.jpg",
+    "rating": 4.6,
+    "players": 4600,
+    "gradient": "linear-gradient(45deg,#ee0979,#ff6a00)"
+  },
+  {
+    "title": "Slither.io",
+    "link": "game/slither-io/",
+    "thumbnail": "images/slither-io-cover.jpg",
+    "rating": 4.2,
+    "players": 8000,
+    "gradient": "linear-gradient(45deg,#8360c3,#2ebf91)"
+  },
+  {
+    "title": "Diep.io",
+    "link": "game/diep-io/",
+    "thumbnail": "images/diep-io-cover.jpg",
+    "rating": 4.3,
+    "players": 3500,
+    "gradient": "linear-gradient(45deg,#30cfd0,#330867)"
+  },
+  {
+    "title": "Surviv.io",
+    "link": "game/surviv-io/",
+    "thumbnail": "images/surviv-io-cover.jpg",
+    "rating": 4.4,
+    "players": 2700,
+    "gradient": "linear-gradient(45deg,#f953c6,#b91d73)"
+  },
+  {
+    "title": "Agar.io",
+    "link": "game/agar-io/",
+    "thumbnail": "images/agar-io-cover.jpg",
+    "rating": 4.1,
+    "players": 9000,
+    "gradient": "linear-gradient(45deg,#43cea2,#185a9d)"
+  }
+]

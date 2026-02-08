@@ -259,58 +259,9 @@
 <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
 <script src="/js/include-header-footer.js"></script>
-<!-- <script src="/js/main.js"></script> -->
+<script src="/js/main.js"></script>
 <script src="/js/vote.js"></script>
-<script>
-const loadGames = async () => {
-  try {
-    const res = await fetch('/js/games.json');
-    if (!res.ok) throw new Error("Cannot fetch games.json");
 
-    const games = await res.json();
-    const grid = document.getElementById('gamesGrid');
-    grid.innerHTML = '';
-
-    // 🔑 slug ديال الصفحة الحالية
-    const pathParts = window.location.pathname.split('/').filter(Boolean);
-    const currentSlug = pathParts[pathParts.length - 1];
-
-    games.forEach(game => {
-      if (!game.link) return;
-
-      // 🔑 slug ديال اللعبة من JSON
-      const gameSlug = game.link
-        .replace('./', '')
-        .split('/')
-        .filter(Boolean)
-        .pop();
-
-      // ❌ حيد اللعبة الحالية
-      if (gameSlug === currentSlug) return;
-
-      const card = document.createElement('div');
-      card.className = 'game-card';
-      card.dataset.title = game.title.toLowerCase();
-      card.onclick = () => window.location.href = game.link;
-
-      card.innerHTML = `
-        <div class="game-thumb" style="background:${game.gradient || 'gray'};">
-          <img src="${game.thumbnail}" alt="${game.title}">
-        </div>
-        <div class="game-info">
-          <h3>${game.title}</h3>
-        </div>
-      `;
-
-      grid.appendChild(card);
-    });
-
-  } catch (err) {
-    console.error(err);
-  }
-};
-
-</script>
 </body>
 </html>
 

@@ -1,5 +1,13 @@
 [
   {
+    "title": "MineFun Io Game",
+    "link": "minefuniogame.github.io",
+    "thumbnail": "/images/minefuniogame-cover.png",
+    "rating": 4.7,
+    "players": 1800,
+    "gradient": "linear-gradient(45deg,#7f7cff,#5ee7df)"
+  },
+  {
     "title": "Bloxd.io",
     "link": "/game/bloxd-io/",
     "thumbnail": "/images/bloxd-io-cover.png",

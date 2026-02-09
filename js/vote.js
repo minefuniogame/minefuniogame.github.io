@@ -159,7 +159,7 @@ function updateCardRating(slug, likes, dislikes) {
     </span>
   `;
 }
-
+document.addEventListener("DOMContentLoaded", () => {
 // Listen to real-time Firebase votes
 const allCards = document.querySelectorAll('.game-card');
 allCards.forEach(card => {
@@ -170,5 +170,6 @@ console.log("jjjjjjj",slug)
     const data = snapshot.val() || { likes: 0, dislikes: 0 };
     updateCardRating(slug, data.likes, data.dislikes);
   });
+});
 });
 

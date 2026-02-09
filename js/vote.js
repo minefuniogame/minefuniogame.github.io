@@ -135,4 +135,39 @@ function handleVote(type){
 likeBtn.onclick = () => handleVote('likes');
 dislikeBtn.onclick = () => handleVote('dislikes');
 
+// Update rating for a specific game card
+function updateCardRating(slug, likes, dislikes) {
+  const totalVotes = likes + dislikes;
+  let rating = 0;
+  if (totalVotes > 0) rating = (likes / totalVotes) * 10;
+  rating = rating.toFixed(1);
+
+  // select the correct game-card based on data-title (slug)
+  const card = document.querySelector(`.game-card[data-title="${slug.replace(".", "-").toLowerCase()}"]`);
+  if (!card) return;
+
+  const meta = card.querySelector('.game-meta');
+  if (!meta) return;
+
+  // update the inner HTML of .game-meta
+  meta.innerHTML = `
+    <span>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="#fbbf24" stroke="#fbbf24" stroke-width="2">
+        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+      </svg>
+      ${rating}
+    </span>
+  `;
+}
+
+// Listen to real-time Firebase votes
+const allCards = document.querySelectorAll('.game-card');
+allCards.forEach(card => {
+  const slug = card.dataset.title;
+
+  db.ref('votes/' + slug).on('value', snapshot => {
+    const data = snapshot.val() || { likes: 0, dislikes: 0 };
+    updateCardRating(slug, data.likes, data.dislikes);
+  });
+});
 

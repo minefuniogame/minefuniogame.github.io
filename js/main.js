@@ -39,11 +39,12 @@ document.addEventListener("DOMContentLoaded", () => {
         `;
         grid.appendChild(card);
         }
-        console.log("ttttttt");
-        if (window.editCardRating){
+
+       
+      });
+       if (window.editCardRating){
           window.editCardRating();
         }
-      });
 
       // 2. Search function (after cards loaded)
       const searchInput = document.getElementById("searchInput");

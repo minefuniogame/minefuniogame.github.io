@@ -52,38 +52,38 @@ function updateIconFill(){
 }
 
 // ⭐ Rating الحساب
-function updateRating(likes, dislikes){
-  const totalVotes = likes + dislikes;
-  let rating = 0;
+// function updateRating(likes, dislikes){
+//   const totalVotes = likes + dislikes;
+//   let rating = 0;
 
-  if(totalVotes > 0){
-    rating = (likes / totalVotes) * 10;
-  }
+//   if(totalVotes > 0){
+//     rating = (likes / totalVotes) * 10;
+//   }
 
-  rating = rating.toFixed(1);
+//   rating = rating.toFixed(1);
 
-  ratingValue.textContent = rating;
-  ratingFill.style.width = (rating * 10) + '%';
+//   ratingValue.textContent = rating;
+//   ratingFill.style.width = (rating * 10) + '%';
 
-  // color change based on rating
-  if(rating < 4){
-    ratingFill.style.background = '#ff6b6b';
-  } else if(rating < 7){
-    ratingFill.style.background = '#f7b731';
-  } else {
-    ratingFill.style.background = '#26de81';
-  }
-  if (rating != 0) {
-      // Get all elements with the class 'your-class-name'
-const elements = document.querySelectorAll('.rating-box');
+//   // color change based on rating
+//   if(rating < 4){
+//     ratingFill.style.background = '#ff6b6b';
+//   } else if(rating < 7){
+//     ratingFill.style.background = '#f7b731';
+//   } else {
+//     ratingFill.style.background = '#26de81';
+//   }
+//   if (rating != 0) {
+//       // Get all elements with the class 'your-class-name'
+// const elements = document.querySelectorAll('.rating-box');
 
-// Iterate over the elements and set the display property
-elements.forEach(el => {
-  el.style.display = 'inline';
-});
+// // Iterate over the elements and set the display property
+// elements.forEach(el => {
+//   el.style.display = 'inline';
+// });
 
-  }
-}
+//   }
+// }
 
 // Listen to global votes in real-time
 db.ref('votes/' + slug).on('value', snapshot => {
@@ -93,7 +93,7 @@ db.ref('votes/' + slug).on('value', snapshot => {
   dislikeCount.textContent = data.dislikes;
 
   updateIconFill();
-  updateRating(data.likes, data.dislikes);
+  // updateRating(data.likes, data.dislikes);
 });
 
 // Push vote to Firebase
@@ -159,6 +159,7 @@ function updateCardRating(slug, likes, dislikes) {
     </span>
   `;
 }
+function editCardRating() {
 document.addEventListener("DOMContentLoaded", () => {
 // Listen to real-time Firebase votes
 const allCards = document.querySelectorAll('.game-card');
@@ -174,4 +175,5 @@ console.log("jjjjjjj",slug)
   });
 });
 });
-
+};
+window.editCardRating = editCardRating;

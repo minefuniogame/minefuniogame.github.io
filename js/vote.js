@@ -159,10 +159,11 @@ function updateCardRating(slug, likes, dislikes) {
     </span>
   `;
 }
-console.log("jjjjjjj",233)
+
 // Listen to real-time Firebase votes
 const allCards = document.querySelectorAll('.game-card');
 allCards.forEach(card => {
+  console.log("jjjjjjj",233)
   const slug = card.dataset.title;
 console.log("jjjjjjj",slug)
   db.ref('votes/' + slug).on('value', snapshot => {

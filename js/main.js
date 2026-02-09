@@ -30,7 +30,8 @@ document.addEventListener("DOMContentLoaded", () => {
           <div class="game-thumb" style="background: ${game.gradient || 'gray'};">
             <img src="${game.thumbnail}" alt="${game.title}">
           </div>
-         
+               <div class="game-meta">
+        </div>
         `;
         grid.appendChild(card);
         }

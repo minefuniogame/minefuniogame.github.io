@@ -164,7 +164,7 @@ function updateCardRating(slug, likes, dislikes) {
 const allCards = document.querySelectorAll('.game-card');
 allCards.forEach(card => {
   const slug = card.dataset.title;
-console.log(slug)
+console.log("jjjjjjj",slug)
   db.ref('votes/' + slug).on('value', snapshot => {
     const data = snapshot.val() || { likes: 0, dislikes: 0 };
     updateCardRating(slug, data.likes, data.dislikes);

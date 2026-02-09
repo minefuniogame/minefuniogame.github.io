@@ -160,7 +160,7 @@ function updateCardRating(slug, likes, dislikes) {
   `;
 }
 function editCardRating() {
-document.addEventListener("DOMContentLoaded", () => {
+
 // Listen to real-time Firebase votes
 const allCards = document.querySelectorAll('.game-card');
   
@@ -174,6 +174,6 @@ console.log("jjjjjjj",slug)
     updateCardRating(slug, data.likes, data.dislikes);
   });
 });
-});
+
 };
 window.editCardRating = editCardRating;

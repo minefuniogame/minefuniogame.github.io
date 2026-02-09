@@ -160,7 +160,7 @@ function updateCardRating(titleSlug, likes, dislikes) {
   `;
 }
 function editCardRating() {
-
+ console.log("kkkkkk",allCards)
 // Listen to real-time Firebase votes
 const allCards = document.querySelectorAll('.game-card');
   

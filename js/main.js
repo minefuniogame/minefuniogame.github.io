@@ -39,6 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
         `;
         grid.appendChild(card);
         }
+        console.log("ttttttt");
         if (window.editCardRating){
           window.editCardRating();
         }

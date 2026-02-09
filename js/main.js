@@ -39,6 +39,9 @@ document.addEventListener("DOMContentLoaded", () => {
         `;
         grid.appendChild(card);
         }
+        if (window.editCardRating){
+          window.editCardRating();
+        }
       });
 
       // 2. Search function (after cards loaded)

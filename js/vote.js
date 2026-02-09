@@ -136,14 +136,14 @@ likeBtn.onclick = () => handleVote('likes');
 dislikeBtn.onclick = () => handleVote('dislikes');
 
 // Update rating for a specific game card
-function updateCardRating(slug, likes, dislikes) {
+function updateCardRating(titleSlug, likes, dislikes) {
   const totalVotes = likes + dislikes;
   let rating = 0;
   if (totalVotes > 0) rating = (likes / totalVotes) * 10;
   rating = rating.toFixed(1);
 
   // select the correct game-card based on data-title (slug)
-  const card = document.querySelector(`.game-card[data-title="${slug.replace(".", "-").replace(" ", "-").toLowerCase()}"]`);
+  const card = document.querySelector(`.game-card[data-title="${titleSlug"]`);
   if (!card) return;
 
   const meta = card.querySelector('.game-meta');
@@ -167,11 +167,12 @@ const allCards = document.querySelectorAll('.game-card');
   console.log("jjjjjjj",allCards)
 allCards.forEach(card => {
   console.log("jjjjjjj",233)
-  const slug = card.dataset.title;
+  const titleSlug = card.dataset.title;
+  const slug = card.dataset.title.replace(".", "-").replace(" ", "-").toLowerCase();
 console.log("jjjjjjj",slug)
   db.ref('votes/' + slug).on('value', snapshot => {
     const data = snapshot.val() || { likes: 0, dislikes: 0 };
-    updateCardRating(slug, data.likes, data.dislikes);
+    updateCardRating(titleSlug, data.likes, data.dislikes);
   });
 });
 

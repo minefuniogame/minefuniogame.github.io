@@ -123,7 +123,7 @@ document.addEventListener("DOMContentLoaded", () => {
   function addFavIconToPages(){
   const link = document.createElement('link');
   link.rel = 'icon';
-  link.href = '/images/minefuniogame-logo.png';
+  link.href = '/favicon-96x96.png';
   link.type = 'image/png';
 
   // Append it to the head

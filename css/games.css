@@ -462,8 +462,8 @@ section:nth-child(odd) {
   gap: 6px;
   padding: 10px;
   border-radius: 14px;
-  border: 1px solid #e5e7eb;
-  background: #fff;
+  border: 0px solid #e5e7eb;
+  background: #23363efa;
   font-weight: 600;
   cursor: pointer;
   transition: 0.2s ease;

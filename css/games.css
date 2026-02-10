@@ -493,3 +493,10 @@ section:nth-child(odd) {
 .game-name { 
   font-size: 30px !important;
 }
+
+a {
+  text-decoration: none;
+}
+a: hover {
+  transform: 'scale(2, 2)';
+}

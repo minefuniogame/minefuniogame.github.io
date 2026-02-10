@@ -496,9 +496,9 @@ section:nth-child(odd) {
 
 a {
   text-decoration: none;
-  color: var(--bg-primary)
+  color: var(--accent-primary)
 }
 a: hover {
   transform: translateX(4px);
-  transform: scale(2, 2)
+  transform: scale(2, 2);
 }

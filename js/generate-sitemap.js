@@ -1,7 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 
-const baseUrl = "https://minefuniogame.github.io/";
+const baseUrl = "https://minefuniogame.github.io";
 
 const gamesDir = path.join(__dirname, "game");
 

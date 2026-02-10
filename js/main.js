@@ -83,25 +83,25 @@ document.addEventListener("DOMContentLoaded", () => {
       //  if (window.editCardRating){
       //     window.editCardRating();
       //   }
-function editCardRating() {
- console.log("kkkkkk",allCards)
-// Listen to real-time Firebase votes
-const allCards = document.querySelectorAll('.game-card');
+// function editCardRating() {
+//  console.log("kkkkkk",allCards)
+// // Listen to real-time Firebase votes
+// const allCards = document.querySelectorAll('.game-card');
   
 
-allCards.forEach(card => {
+// allCards.forEach(card => {
 
-  const titleSlug = card.dataset.title;
-  const slug = card.dataset.title.replace(".", "-").replace(" ", "-").toLowerCase();
+//   const titleSlug = card.dataset.title;
+//   const slug = card.dataset.title.replace(".", "-").replace(" ", "-").toLowerCase();
 
-  db.ref('votes/' + slug).on('value', snapshot => {
-    const data = snapshot.val() || { likes: 0, dislikes: 0 };
-    updateCardRating(titleSlug, data.likes, data.dislikes);
-  });
-});
+//   db.ref('votes/' + slug).on('value', snapshot => {
+//     const data = snapshot.val() || { likes: 0, dislikes: 0 };
+//     updateCardRating(titleSlug, data.likes, data.dislikes);
+//   });
+// });
 
-};
-        editCardRating();
+// };
+//         editCardRating();
       // 2. Search function (after cards loaded)
       const searchInput = document.getElementById("searchInput");
       searchInput.addEventListener("keyup", () => {

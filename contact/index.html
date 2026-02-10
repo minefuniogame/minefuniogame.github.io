@@ -10,38 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/css/games.css">
 <link rel="stylesheet" href="/css/style.css">
-<style>
-  .contact-form {
-    max-width: 600px;
-    margin: 2rem auto;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
-  .contact-form input,
-  .contact-form textarea {
-    padding: 0.8rem;
-    font-size: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-  }
-  .contact-form button {
-    padding: 0.8rem;
-    font-size: 1.1rem;
-    background-color: #2f80ed;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-  }
-  #success-msg {
-    display: none;
-    color: green;
-    font-weight: bold;
-    margin-top: 1rem;
-    text-align: center;
-  }
-</style>
+<link rel="stylesheet" href="/css/contact.css">
 </head>
 <body>
 <header></header>
@@ -75,22 +44,8 @@
 <footer></footer>
 
 <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-<script>
-  // Init EmailJS
-  (function(){emailjs.init("SJTn_hClPmNz8zF4V");})();
-
-  document.getElementById("contact-form").addEventListener("submit", function(e){
-    e.preventDefault();
-    emailjs.sendForm("service_a8c7ise","template_fr2y8gb", this)
-    .then(function(){
-      document.getElementById("success-msg").style.display = "block";
-      document.getElementById("contact-form").reset();
-    }, function(error){
-      alert("Error sending message ❌");
-      console.log(error);
-    });
-  });
-</script>
+  <script src="/js/main.js"></script>
+<script src="/js/contact.js"></script>
 
 </body>
 </html>

@@ -120,7 +120,7 @@ h1::after {
   background: var(--bg-secondary);
   border: 1px solid var(--border);
   border-radius: 20px;
-  padding: 24px;
+  padding: 14px;
   margin: 48px 0;
   box-shadow: 
     0 20px 60px rgba(0, 0, 0, 0.5),

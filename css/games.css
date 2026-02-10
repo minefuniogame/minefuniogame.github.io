@@ -455,6 +455,7 @@ section:nth-child(odd) {
   /* Vote buttons */
  #like-btn { color: #22c55e; }     /* green */
 #dislike-btn { color: #ef4444; }  /* red */
+#fullScreen {color: #0fe522}
 
 .vote-buttons button {
   display: flex;

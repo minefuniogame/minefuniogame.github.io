@@ -1,4 +1,42 @@
 
+// Initialize Firebase
+const firebaseConfig = {
+  apiKey: "AIzaSyBRNoFOHQ2bC6XTliivWfpGMBDfKnR9sko",
+  authDomain: "general-games-2775e.firebaseapp.com",
+  databaseURL: "https://general-games-2775e-default-rtdb.firebaseio.com",
+  projectId: "general-games-2775e",
+  storageBucket: "general-games-2775e.firebasestorage.app",
+  messagingSenderId: "750591153144",
+  appId: "1:750591153144:web:12c8207bc0aa08c2b43c0d",
+  measurementId: "G-5HM7TYMGD9"
+};
+
+firebase.initializeApp(firebaseConfig);
+const db = firebase.database();
+
+function updateCardRating(titleSlug, likes, dislikes) {
+  const totalVotes = likes + dislikes;
+  let rating = 0;
+  if (totalVotes > 0) rating = (likes / totalVotes) * 10;
+  rating = rating.toFixed(1);
+
+  // select the correct game-card based on data-title (slug)
+  const card = document.querySelector(`.game-card[data-title="${titleSlug"]`);
+  if (!card) return;
+
+  const meta = card.querySelector('.game-meta');
+  if (!meta) return;
+
+  // update the inner HTML of .game-meta
+  meta.innerHTML = `
+    <span>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="#fbbf24" stroke="#fbbf24" stroke-width="2">
+        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+      </svg>
+      ${rating}
+    </span>
+  `;
+}
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -41,11 +79,29 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
        
-      });
-       if (window.editCardRating){
-          window.editCardRating();
-        }
+      // });
+      //  if (window.editCardRating){
+      //     window.editCardRating();
+      //   }
+function editCardRating() {
+ console.log("kkkkkk",allCards)
+// Listen to real-time Firebase votes
+const allCards = document.querySelectorAll('.game-card');
+  
 
+allCards.forEach(card => {
+
+  const titleSlug = card.dataset.title;
+  const slug = card.dataset.title.replace(".", "-").replace(" ", "-").toLowerCase();
+
+  db.ref('votes/' + slug).on('value', snapshot => {
+    const data = snapshot.val() || { likes: 0, dislikes: 0 };
+    updateCardRating(titleSlug, data.likes, data.dislikes);
+  });
+});
+
+};
+        editCardRating();
       // 2. Search function (after cards loaded)
       const searchInput = document.getElementById("searchInput");
       searchInput.addEventListener("keyup", () => {

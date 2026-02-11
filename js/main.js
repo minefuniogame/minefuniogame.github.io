@@ -132,7 +132,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 addFavIconToPages()
 
-function addAnalyticsScript() {
+function addAhrefsScript() {
   const script = document.createElement('script');
   script.src = "https://analytics.ahrefs.com/analytics.js";
   script.async = true;
@@ -141,8 +141,23 @@ function addAnalyticsScript() {
   document.head.appendChild(script);
   console.log("Ahrefs Analytics loaded ✅");
 };
-addAnalyticsScript()
+addAhrefsScript()
 
+  function addAnalyticsScript() {
+  const script = document.createElement('script');
+  script.async = true;
+  script.src = "https://www.googletagmanager.com/gtag/js?id=G-GS1CEPEN9N";
+    
+  document.head.appendChild(script);
+  console.log("Analytics added");
+      window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-GS1CEPEN9N');
+};
+addAnalyticsScript()
+  
 
 
 function toggleFullScreen() {

@@ -192,7 +192,7 @@ function toggleFullScreen() {
 async function setupAutoLinks() {
   try {
     // 1. Fetch the games.json file
-    const response = await fetch('games.json');
+    const response = await fetch('/js/games.json');
     
     // Check if the file exists
     if (!response.ok) {

@@ -209,7 +209,7 @@ async function setupAutoLinks() {
 
       // 3. Match text against JSON data
       gamesData.forEach(game => {
-        if (elementText === game.title) {
+        if (elementText === game.title.replace(":", "") {
           // Wrap the text in a link if it doesn't have one
           if (!element.querySelector('a')) {
             element.innerHTML = `<a href="${game.link}" class="auto-link">${elementText}</a>`;

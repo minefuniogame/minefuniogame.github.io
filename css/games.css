@@ -504,6 +504,6 @@ a: hover {
   transform: scale(2, 2);
 }
 
-#logo {
+#logo img {
   width: 120px;
 }

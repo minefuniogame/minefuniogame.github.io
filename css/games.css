@@ -235,7 +235,7 @@ h3 {
   transition: transform 0.2s ease;
 }
 
-.table-of-contents li:hover, #similar strong:hover {
+.table-of-contents li:hover, #similar li:hover {
   transform: translateX(4px);
 }
 

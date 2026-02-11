@@ -188,3 +188,40 @@ function toggleFullScreen() {
     }
   }
 }
+
+async function setupAutoLinks() {
+  try {
+    // 1. Fetch the games.json file
+    const response = await fetch('games.json');
+    
+    // Check if the file exists
+    if (!response.ok) {
+      throw new Error("Could not find games.json file");
+    }
+
+    const gamesData = await response.json();
+
+    // 2. Select all <strong> tags inside the #similar container
+    const strongElements = document.querySelectorAll('#similar strong');
+
+    strongElements.forEach(element => {
+      const elementText = element.textContent.trim();
+
+      // 3. Match text against JSON data
+      gamesData.forEach(game => {
+        if (elementText === game.title) {
+          // Wrap the text in a link if it doesn't have one
+          if (!element.querySelector('a')) {
+            element.innerHTML = `<a href="${game.link}" class="auto-link">${elementText}</a>`;
+          }
+        }
+      });
+    });
+
+  } catch (error) {
+    console.error("Error loading games.json:", error);
+  }
+}
+
+// Run the script when the page is ready
+window.addEventListener('DOMContentLoaded', setupAutoLinks);

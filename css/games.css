@@ -503,3 +503,7 @@ a: hover {
   transform: translateX(4px);
   transform: scale(2, 2);
 }
+
+#logo {
+  width: 120px;
+}

@@ -203,7 +203,7 @@ window.addEventListener('DOMContentLoaded', setupAutoLinks);
 // firebase.initializeApp(cngfire);
 // const db1 = firebase.database();
 
-async function updateCardRating(titleSlug, likes, dislikes) {
+function updateCardRating(titleSlug, likes, dislikes) {
   const totalVotes = likes + dislikes;
   let rating = 0;
   if (totalVotes > 0) rating = (likes / totalVotes) * 10;

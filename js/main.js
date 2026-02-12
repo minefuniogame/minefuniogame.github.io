@@ -38,6 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
         `;
         grid.appendChild(card);
           console.log(game.title)
+          updateCardRating(game.title);
         }
 
        
@@ -58,9 +59,9 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   loadGames(); // call async function
-loadGames().then(() => {
-  updateCardRating("krunker.io", 9, 1);
-});
+// loadGames().then(() => {
+//   updateCardRating("krunker.io", 9, 1);
+// });
 });
 
   function addFavIconToPages(){
@@ -185,7 +186,7 @@ window.addEventListener('DOMContentLoaded', setupAutoLinks);
 // firebase.initializeApp(cngfire);
 // const db1 = firebase.database();
 
-function updateCardRating(titleSlug, likes, dislikes) {
+function updateCardRating(titleSlug) {
   
   // select the correct game-card based on data-title (slug)
   try {

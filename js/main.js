@@ -32,17 +32,22 @@ document.addEventListener("DOMContentLoaded", () => {
         <div class="game-info">
             <h3>${game.title}</h3>
             <div class="game-meta">
-            <span>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="#fbbf24" stroke="#fbbf24" stroke-width="2">
-                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
-              </svg>
-              ${updateCardRating(game.title)}
-            </span>
+          
             </div>
           </div>
         `;
         grid.appendChild(card);
-          console.log(updateCardRating(game.title), "rrrrrr")
+            const rating = await updateCardRating(game.title);
+            const meta = card.querySelector('.game-meta');
+            meta.innerHTML = `
+              <span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="#fbbf24" stroke="#fbbf24" stroke-width="2">
+                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                </svg>
+                ${rating}
+              </span>
+            `;
+
         }
       });
     
@@ -173,6 +178,23 @@ async function setupAutoLinks() {
 window.addEventListener('DOMContentLoaded', setupAutoLinks);
 
 
+async function updateCardRating(titleSlug) {
+  const slug = titleSlug.replace(".", "-").replace(" ", "-").toLowerCase();
+  try {
+    const snapshot = await db.ref('votes/' + slug).once('value');
+    const data = snapshot.val() || { likes: 0, dislikes: 0 };
+    const totalVotes = data.likes + data.dislikes;
+    let rating = 0;
+    if (totalVotes > 0) rating = (data.likes / totalVotes) * 10;
+    return rating.toFixed(1);
+  } catch (e) {
+    console.log("Firebase error:", e);
+    return 0;
+  }
+}
+
+
+
 // // Initialize Firebase
 // const cngfire = {
 //   apiKey: "AIzaSyBRNoFOHQ2bC6XTliivWfpGMBDfKnR9sko",
@@ -188,45 +210,45 @@ window.addEventListener('DOMContentLoaded', setupAutoLinks);
 // firebase.initializeApp(cngfire);
 // const db1 = firebase.database();
 
-function updateCardRating(titleSlug) {
+// function updateCardRating(titleSlug) {
   
-  // select the correct game-card based on data-title (slug)
-  try {
+//   // select the correct game-card based on data-title (slug)
+//   try {
 
-  // const slug = titleSlug.replace(".", "-").replace(" ", "-").toLowerCase();
-  //   db.ref('votes/' + slug).on('value', snapshot => {
-  //    const data = snapshot.val() || { likes: 0, dislikes: 0 };
-  //    const totalVotes = data.likes + data.dislikes;
-     let rating = 0;
-     // if (totalVotes > 0) rating = (data.likes / totalVotes) * 10;
-     rating = rating.toFixed(1);
-      // if (rating != 0.0){
-        return rating
-      // }
-   // });
-  // if (!card) return;
+//   const slug = titleSlug.replace(".", "-").replace(" ", "-").toLowerCase();
+//     db.ref('votes/' + slug).on('value', snapshot => {
+//      const data = snapshot.val() || { likes: 0, dislikes: 0 };
+//      const totalVotes = data.likes + data.dislikes;
+//      let rating = 0;
+//      // if (totalVotes > 0) rating = (data.likes / totalVotes) * 10;
+//      rating = rating.toFixed(1);
+//       // if (rating != 0.0){
+//         return rating
+//       // }
+//    });
+//   // if (!card) return;
 
-  // const meta = card.querySelector('.game-meta');
-  // if (!meta) return;
+//   // const meta = card.querySelector('.game-meta');
+//   // if (!meta) return;
 
-  // // update the inner HTML of .game-meta
-  // meta.innerHTML = `
-    // <span>
-    //   <svg width="14" height="14" viewBox="0 0 24 24" fill="#fbbf24" stroke="#fbbf24" stroke-width="2">
-    //     <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
-    //   </svg>
-    //   ${rating}
-    // </span>
-  // `;
-  }catch (e) {
-    console.log("Here is error: ", e)
-  }
+//   // // update the inner HTML of .game-meta
+//   // meta.innerHTML = `
+//   //   <span>
+//   //     <svg width="14" height="14" viewBox="0 0 24 24" fill="#fbbf24" stroke="#fbbf24" stroke-width="2">
+//   //       <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+//   //     </svg>
+//   //     ${rating}
+//   //   </span>
+//   // `;
+//   }catch (e) {
+//     console.log("Here is error: ", e)
+//   }
 
-}
+// }
 
-// document.addEventListener("DOMContentLoaded", function () {
-//   updateCardRating("Bloxd.io".toLowerCase(), 9, 1);
-// });
+// // document.addEventListener("DOMContentLoaded", function () {
+// //   updateCardRating("Bloxd.io".toLowerCase(), 9, 1);
+// // });
 
 
 

@@ -186,15 +186,19 @@ window.addEventListener('DOMContentLoaded', setupAutoLinks);
 // const db1 = firebase.database();
 
 function updateCardRating(titleSlug, likes, dislikes) {
-  const totalVotes = likes + dislikes;
-  let rating = 0;
-  if (totalVotes > 0) rating = (likes / totalVotes) * 10;
-  rating = rating.toFixed(1);
-
+  
   // select the correct game-card based on data-title (slug)
   try {
   const card = document.querySelector(`[data-title="Krunker.io"]`);
-    console.log(card)
+  const slug = card.dataset.title.replace(".", "-").replace(" ", "-").toLowerCase();
+    db.ref('votes/' + slug).on('value', snapshot => {
+     const data = snapshot.val() || { likes: 0, dislikes: 0 };
+     const totalVotes = data.likes + data.dislikes;
+     let rating = 0;
+     if (totalVotes > 0) rating = (data.likes / totalVotes) * 10;
+     rating = rating.toFixed(1);
+      console.log(rating, "rrrrrrrrr")
+   });
   // if (!card) return;
 
   // const meta = card.querySelector('.game-meta');
@@ -212,6 +216,7 @@ function updateCardRating(titleSlug, likes, dislikes) {
   }catch (e) {
     console.log("Here is error: ", e)
   }
+
 }
 
 // document.addEventListener("DOMContentLoaded", function () {

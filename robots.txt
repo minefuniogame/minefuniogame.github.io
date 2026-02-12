@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://minefuniogame.github.io/sitemap.xml

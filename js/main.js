@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
           </div>
         `;
         grid.appendChild(card);
-          console.log(game.tite)
+          console.log(game.title)
         }
 
        

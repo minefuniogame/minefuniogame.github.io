@@ -189,48 +189,48 @@ window.addEventListener('DOMContentLoaded', setupAutoLinks);
 
 
 // // Initialize Firebase
-const cngfire = {
-  apiKey: "AIzaSyBRNoFOHQ2bC6XTliivWfpGMBDfKnR9sko",
-  authDomain: "general-games-2775e.firebaseapp.com",
-  databaseURL: "https://general-games-2775e-default-rtdb.firebaseio.com",
-  projectId: "general-games-2775e",
-  storageBucket: "general-games-2775e.firebasestorage.app",
-  messagingSenderId: "750591153144",
-  appId: "1:750591153144:web:12c8207bc0aa08c2b43c0d",
-  measurementId: "G-5HM7TYMGD9"
-};
+// const cngfire = {
+//   apiKey: "AIzaSyBRNoFOHQ2bC6XTliivWfpGMBDfKnR9sko",
+//   authDomain: "general-games-2775e.firebaseapp.com",
+//   databaseURL: "https://general-games-2775e-default-rtdb.firebaseio.com",
+//   projectId: "general-games-2775e",
+//   storageBucket: "general-games-2775e.firebasestorage.app",
+//   messagingSenderId: "750591153144",
+//   appId: "1:750591153144:web:12c8207bc0aa08c2b43c0d",
+//   measurementId: "G-5HM7TYMGD9"
+// };
 
 // firebase.initializeApp(firebaseConfig);
 // const db = firebase.database();
 
-// async function updateCardRating(titleSlug, likes, dislikes) {
-//   const totalVotes = likes + dislikes;
-//   let rating = 0;
-//   if (totalVotes > 0) rating = (likes / totalVotes) * 10;
-//   rating = rating.toFixed(1);
+async function updateCardRating(titleSlug, likes, dislikes) {
+  const totalVotes = likes + dislikes;
+  let rating = 0;
+  if (totalVotes > 0) rating = (likes / totalVotes) * 10;
+  rating = rating.toFixed(1);
 
-//   // select the correct game-card based on data-title (slug)
-//   try {
-//   const card = document.querySelector(`.game-card[data-title="${titleSlug.toLowerCase()"]`);
-//   if (!card) return;
+  // select the correct game-card based on data-title (slug)
+  try {
+  const card = document.querySelector(`.game-card[data-title="${titleSlug.toLowerCase()"]`);
+  if (!card) return;
 
-//   const meta = card.querySelector('.game-meta');
-//   if (!meta) return;
+  const meta = card.querySelector('.game-meta');
+  if (!meta) return;
 
-//   // update the inner HTML of .game-meta
-//   meta.innerHTML = `
-//     <span>
-//       <svg width="14" height="14" viewBox="0 0 24 24" fill="#fbbf24" stroke="#fbbf24" stroke-width="2">
-//         <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
-//       </svg>
-//       ${rating}
-//     </span>
-//   `;
-//   }catch (e) {
-//     console.log("Here is error: ", e)
-//   }
-// }
+  // update the inner HTML of .game-meta
+  meta.innerHTML = `
+    <span>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="#fbbf24" stroke="#fbbf24" stroke-width="2">
+        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+      </svg>
+      ${rating}
+    </span>
+  `;
+  }catch (e) {
+    console.log("Here is error: ", e)
+  }
+}
 
-// document.addEventListener("DOMContentLoaded", function () {
-//   updateCardRating("Bloxd.io".toLowerCase(), 9, 1);
-// });
+document.addEventListener("DOMContentLoaded", function () {
+  updateCardRating("Bloxd.io".toLowerCase(), 9, 1);
+});

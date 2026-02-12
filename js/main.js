@@ -211,7 +211,7 @@ async function updateCardRating(titleSlug, likes, dislikes) {
 
   // select the correct game-card based on data-title (slug)
   try {
-  const card = document.querySelector(`.game-card[data-title="${titleSlug"]`);
+  const card = document.querySelector(`.game-card[data-title="${titleSlug.toLowerCase()"]`);
   if (!card) return;
 
   const meta = card.querySelector('.game-meta');
@@ -232,5 +232,5 @@ async function updateCardRating(titleSlug, likes, dislikes) {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-  updateCardRating("Bloxd.io", 9, 1);
+  updateCardRating("Bloxd.io".toLowerCase(), 9, 1);
 });

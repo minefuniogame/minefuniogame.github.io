@@ -189,16 +189,16 @@ window.addEventListener('DOMContentLoaded', setupAutoLinks);
 
 
 // // Initialize Firebase
-const firebaseConfig = {
-  apiKey: "AIzaSyBRNoFOHQ2bC6XTliivWfpGMBDfKnR9sko",
-  authDomain: "general-games-2775e.firebaseapp.com",
-  databaseURL: "https://general-games-2775e-default-rtdb.firebaseio.com",
-  projectId: "general-games-2775e",
-  storageBucket: "general-games-2775e.firebasestorage.app",
-  messagingSenderId: "750591153144",
-  appId: "1:750591153144:web:12c8207bc0aa08c2b43c0d",
-  measurementId: "G-5HM7TYMGD9"
-};
+// const firebaseConfig = {
+//   apiKey: "AIzaSyBRNoFOHQ2bC6XTliivWfpGMBDfKnR9sko",
+//   authDomain: "general-games-2775e.firebaseapp.com",
+//   databaseURL: "https://general-games-2775e-default-rtdb.firebaseio.com",
+//   projectId: "general-games-2775e",
+//   storageBucket: "general-games-2775e.firebasestorage.app",
+//   messagingSenderId: "750591153144",
+//   appId: "1:750591153144:web:12c8207bc0aa08c2b43c0d",
+//   measurementId: "G-5HM7TYMGD9"
+// };
 
 // firebase.initializeApp(firebaseConfig);
 // const db = firebase.database();

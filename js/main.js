@@ -32,16 +32,17 @@ document.addEventListener("DOMContentLoaded", () => {
         <div class="game-info">
             <h3>${game.title}</h3>
             <div class="game-meta">
-          
-          </div>
+            <span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="#fbbf24" stroke="#fbbf24" stroke-width="2">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+              </svg>
+              ${updateCardRating(game.title);}
+            </span>
+            </div>
           </div>
         `;
         grid.appendChild(card);
-          console.log(game.title)
-          updateCardRating(game.title);
         }
-
-       
       });
     
       // 2. Search function (after cards loaded)
@@ -198,7 +199,9 @@ function updateCardRating(titleSlug) {
      let rating = 0;
      if (totalVotes > 0) rating = (data.likes / totalVotes) * 10;
      rating = rating.toFixed(1);
-      console.log(rating, "rrrrrrrrr")
+      if (rating != 0.0){
+        return rating
+      }
    });
   // if (!card) return;
 
@@ -207,12 +210,12 @@ function updateCardRating(titleSlug) {
 
   // // update the inner HTML of .game-meta
   // meta.innerHTML = `
-  //   <span>
-  //     <svg width="14" height="14" viewBox="0 0 24 24" fill="#fbbf24" stroke="#fbbf24" stroke-width="2">
-  //       <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
-  //     </svg>
-  //     ${rating}
-  //   </span>
+    // <span>
+    //   <svg width="14" height="14" viewBox="0 0 24 24" fill="#fbbf24" stroke="#fbbf24" stroke-width="2">
+    //     <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+    //   </svg>
+    //   ${rating}
+    // </span>
   // `;
   }catch (e) {
     console.log("Here is error: ", e)

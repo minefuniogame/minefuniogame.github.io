@@ -13,7 +13,8 @@ document.addEventListener("DOMContentLoaded", () => {
       const grid = document.getElementById('gamesGrid');
       grid.innerHTML = '';
 
-      games.forEach(game => {
+      // games.forEach(game => {
+      for (const game of games) {
         const rating = game.rating ?? 0;
         const players = game.players ?? 0;
         const link = game.link || "#";
@@ -49,7 +50,8 @@ document.addEventListener("DOMContentLoaded", () => {
             `;
 
         }
-      });
+      }
+                   // );
     
       // 2. Search function (after cards loaded)
       const searchInput = document.getElementById("searchInput");

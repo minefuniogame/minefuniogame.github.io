@@ -231,4 +231,6 @@ async function updateCardRating(titleSlug, likes, dislikes) {
   }
 }
 
-updateCardRating("Bloxd.io", 9, 1)
+document.addEventListener("DOMContentLoaded", function () {
+  updateCardRating("Bloxd.io", 9, 1);
+});

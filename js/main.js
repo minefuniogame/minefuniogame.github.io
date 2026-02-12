@@ -191,11 +191,8 @@ async function updateCardRating(titleSlug) {
 }
 
 
-<div class="vote-buttons">
-
-   
-  </div>
 function createVoteButtons(){
+  const parent = document.querySelector(".game-info");
   const card = document.createElement('div');
    card.className = 'vote-buttons';
    card.innerHTML = `
@@ -218,4 +215,7 @@ function createVoteButtons(){
         </button>
 
   `
+  parent.appendChild(card);
 }
+
+createVoteButtons()

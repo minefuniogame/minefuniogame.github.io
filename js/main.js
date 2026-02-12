@@ -227,4 +227,4 @@ async function updateCardRating(titleSlug, likes, dislikes) {
   `;
 }
 
-updateCardRating("bloxd-io", 9, 1)
+updateCardRating("bloxd.io", 9, 1)

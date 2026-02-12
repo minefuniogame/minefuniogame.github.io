@@ -42,6 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
           </div>
         `;
         grid.appendChild(card);
+          console.log(updateCardRating(game.title), "rrrrrr")
         }
       });
     

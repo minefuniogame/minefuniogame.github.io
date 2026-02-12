@@ -210,6 +210,7 @@ async function updateCardRating(titleSlug, likes, dislikes) {
   rating = rating.toFixed(1);
 
   // select the correct game-card based on data-title (slug)
+  try {
   const card = document.querySelector(`.game-card[data-title="${titleSlug"]`);
   if (!card) return;
 
@@ -225,6 +226,9 @@ async function updateCardRating(titleSlug, likes, dislikes) {
       ${rating}
     </span>
   `;
+  }catch (e) {
+    console.log("Here is error: ", e)
+  }
 }
 
-updateCardRating("bloxd.io", 9, 1)
+updateCardRating("Bloxd.io", 9, 1)

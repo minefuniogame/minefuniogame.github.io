@@ -78,7 +78,9 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   loadGames(); // call async function
-
+loadGames().then(() => {
+  updateCardRating("krunker.io", 9, 1);
+});
 });
 
   function addFavIconToPages(){
@@ -236,7 +238,5 @@ function updateCardRating(titleSlug, likes, dislikes) {
 //   updateCardRating("Bloxd.io".toLowerCase(), 9, 1);
 // });
 
-loadGames().then(() => {
-  updateCardRating("krunker.io", 9, 1);
-});
+
 

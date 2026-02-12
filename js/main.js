@@ -191,7 +191,7 @@ function updateCardRating(titleSlug) {
   // select the correct game-card based on data-title (slug)
   try {
 
-  const slug = titleSlug.title.replace(".", "-").replace(" ", "-").toLowerCase();
+  const slug = titleSlug.replace(".", "-").replace(" ", "-").toLowerCase();
     db.ref('votes/' + slug).on('value', snapshot => {
      const data = snapshot.val() || { likes: 0, dislikes: 0 };
      const totalVotes = data.likes + data.dislikes;

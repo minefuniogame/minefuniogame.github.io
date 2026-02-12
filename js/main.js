@@ -193,17 +193,17 @@ function updateCardRating(titleSlug) {
   // select the correct game-card based on data-title (slug)
   try {
 
-  const slug = titleSlug.replace(".", "-").replace(" ", "-").toLowerCase();
-    db.ref('votes/' + slug).on('value', snapshot => {
-     const data = snapshot.val() || { likes: 0, dislikes: 0 };
-     const totalVotes = data.likes + data.dislikes;
+  // const slug = titleSlug.replace(".", "-").replace(" ", "-").toLowerCase();
+  //   db.ref('votes/' + slug).on('value', snapshot => {
+  //    const data = snapshot.val() || { likes: 0, dislikes: 0 };
+  //    const totalVotes = data.likes + data.dislikes;
      let rating = 0;
-     if (totalVotes > 0) rating = (data.likes / totalVotes) * 10;
+     // if (totalVotes > 0) rating = (data.likes / totalVotes) * 10;
      rating = rating.toFixed(1);
       // if (rating != 0.0){
         return rating
       // }
-   });
+   // });
   // if (!card) return;
 
   // const meta = card.querySelector('.game-meta');

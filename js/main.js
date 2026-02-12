@@ -192,7 +192,7 @@ async function updateCardRating(titleSlug) {
 
 
 function createVoteButtons(){
-  const parent = document.querySelector(".game-info");
+  const parent = document.querySelector(".game-container").querySelector(".game-info");
   const card = document.createElement('div');
    card.className = 'vote-buttons';
    card.innerHTML = `

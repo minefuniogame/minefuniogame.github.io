@@ -232,6 +232,11 @@ function updateCardRating(titleSlug, likes, dislikes) {
   }
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-  updateCardRating("Bloxd.io".toLowerCase(), 9, 1);
+// document.addEventListener("DOMContentLoaded", function () {
+//   updateCardRating("Bloxd.io".toLowerCase(), 9, 1);
+// });
+
+loadGames().then(() => {
+  updateCardRating("krunker.io", 9, 1);
 });
+

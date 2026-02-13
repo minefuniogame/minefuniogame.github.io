@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /images/
 
 Sitemap: https://minefuniogame.github.io/sitemap.xml

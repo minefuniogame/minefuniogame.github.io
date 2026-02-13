@@ -46,5 +46,13 @@
     "rating": 4.6,
     "players": 4600,
     "gradient": "linear-gradient(45deg,#ee0979,#ff6a00)"
+  },
+  {
+    "title": "Slither.io",
+    "link": "/game/slither-io/",
+    "thumbnail": "/images/slither-io-cover.png",
+    "rating": 0,
+    "players": 0,
+    "gradient": "linear-gradient(45deg,#8360c3,#2ebf91)"
   }
 ]

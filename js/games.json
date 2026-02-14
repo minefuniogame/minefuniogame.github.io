@@ -56,6 +56,14 @@
     "gradient": "linear-gradient(45deg,#11998e,#38ef7d)"
   },
   {
+    "title": "Moomoo.io",
+    "link": "game/moomoo-io/",
+    "thumbnail": "images/moomoo-io-cover.jpg",
+    "rating": 4.3,
+    "players": 1900,
+    "gradient": "linear-gradient(45deg,#f7971e,#ffd200)"
+  },
+  {
     "title": "Krunker.io",
     "link": "/game/krunker-io/",
     "thumbnail": "/images/krunker-io-cover.png",

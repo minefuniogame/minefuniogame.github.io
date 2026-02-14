@@ -8,6 +8,14 @@
     "gradient": "linear-gradient(45deg,#7f7cff,#5ee7df)"
   },
   {
+    "title": "Diep.io",
+    "link": "/game/diep-io/",
+    "thumbnail": "/images/diep-io-cover.png",
+    "rating": 4.3,
+    "players": 3500,
+    "gradient": "linear-gradient(45deg,#30cfd0,#330867)"
+  },
+  {
     "title": "Paper.io 2",
     "link": "/game/paper-io-2/",
     "thumbnail": "/images/paper-io-2-cover.png",

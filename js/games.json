@@ -57,8 +57,8 @@
   },
   {
     "title": "Moomoo.io",
-    "link": "game/moomoo-io/",
-    "thumbnail": "images/moomoo-io-cover.jpg",
+    "link": "/game/moomoo-io/",
+    "thumbnail": "/images/moomoo-io-cover.png",
     "rating": 4.3,
     "players": 1900,
     "gradient": "linear-gradient(45deg,#f7971e,#ffd200)"

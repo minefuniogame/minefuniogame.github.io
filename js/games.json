@@ -3,12 +3,12 @@
     "title": "MineFun.io",
     "link": "https://minefuniogame.github.io/",
     "thumbnail": "/images/minefuniogame-cover.png",
-  
+    "rating": 4.7,
+    "players": 1800,
     "gradient": "linear-gradient(45deg,#7f7cff,#5ee7df)",
     "description": "MineFun.io unblocked - play fun io games online.",
     "platform": "Web, Android, iOS",
     "genre": "Multiplayer, Action",
-    "author": "MineFun Game Hub"
   },
   {
     "title": "Diep.io",

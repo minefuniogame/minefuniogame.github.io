@@ -5,7 +5,11 @@
     "thumbnail": "/images/minefuniogame-cover.png",
     "rating": 4.7,
     "players": 1800,
-    "gradient": "linear-gradient(45deg,#7f7cff,#5ee7df)"
+    "gradient": "linear-gradient(45deg,#7f7cff,#5ee7df)",
+    "description": "MineFun.io unblocked - play fun io games online.",
+    "platform": "Web, Android, iOS",
+    "genre": "Multiplayer, Action",
+    "author": "MineFun Game Hub"
   },
   {
     "title": "Diep.io",
@@ -13,7 +17,11 @@
     "thumbnail": "/images/diep-io-cover.png",
     "rating": 4.3,
     "players": 3500,
-    "gradient": "linear-gradient(45deg,#30cfd0,#330867)"
+    "gradient": "linear-gradient(45deg,#30cfd0,#330867)",
+    "description": "Diep.io - tank battles, survive and upgrade your tank.",
+    "platform": "Web, Android, iOS",
+    "genre": "Shooter, Strategy",
+    "author": "MineFun Game Hub"
   },
   {
     "title": "Paper.io 2",
@@ -21,7 +29,11 @@
     "thumbnail": "/images/paper-io-2-cover.png",
     "rating": 4.5,
     "players": 5200,
-    "gradient": "linear-gradient(45deg,#56ccf2,#2f80ed)"
+    "gradient": "linear-gradient(45deg,#56ccf2,#2f80ed)",
+    "description": "Paper.io 2 - capture territory and outsmart your opponents.",
+    "platform": "Web, Android, iOS",
+    "genre": "Strategy, Multiplayer",
+    "author": "MineFun Game Hub"
   },
   {
     "title": "Bloxd.io",
@@ -29,7 +41,11 @@
     "thumbnail": "/images/bloxd-io-cover.png",
     "rating": 4.7,
     "players": 1800,
-    "gradient": "linear-gradient(45deg,#7f7cff,#5ee7df)"
+    "gradient": "linear-gradient(45deg,#7f7cff,#5ee7df)",
+    "description": "Bloxd.io - build, survive, and fight in a fun online multiplayer game.",
+    "platform": "Web, Android, iOS",
+    "genre": "Action, Strategy",
+    "author": "MineFun Game Hub"
   },
   {
     "title": "Voxiom.io",
@@ -37,7 +53,11 @@
     "thumbnail": "/images/voxiom-io-cover.png",
     "rating": 4.6,
     "players": 1500,
-    "gradient": "linear-gradient(45deg,#ff9966,#ff5e62)"
+    "gradient": "linear-gradient(45deg,#ff9966,#ff5e62)",
+    "description": "Voxiom.io - voxel shooter combining mining, building, and FPS combat.",
+    "platform": "Web, Android, iOS",
+    "genre": "Shooter, Action",
+    "author": "MineFun Game Hub"
   },
   {
     "title": "Slither.io",
@@ -45,15 +65,23 @@
     "thumbnail": "/images/slither-io-cover.png",
     "rating": 0,
     "players": 0,
-    "gradient": "linear-gradient(45deg,#8360c3,#2ebf91)"
+    "gradient": "linear-gradient(45deg,#8360c3,#2ebf91)",
+    "description": "Slither.io - classic snake game with multiplayer battles online.",
+    "platform": "Web, Android, iOS",
+    "genre": "Arcade, Multiplayer",
+    "author": "MineFun Game Hub"
   },
-{
+  {
     "title": "Zombs.io",
     "link": "/game/zombs-io/",
     "thumbnail": "/images/zombs-io-cover.png",
     "rating": 4.4,
     "players": 2100,
-    "gradient": "linear-gradient(45deg,#11998e,#38ef7d)"
+    "gradient": "linear-gradient(45deg,#11998e,#38ef7d)",
+    "description": "Zombs.io - build your base and defend it against zombies.",
+    "platform": "Web, Android, iOS",
+    "genre": "Strategy, Survival",
+    "author": "MineFun Game Hub"
   },
   {
     "title": "Moomoo.io",
@@ -61,7 +89,11 @@
     "thumbnail": "/images/moomoo-io-cover.png",
     "rating": 4.3,
     "players": 1900,
-    "gradient": "linear-gradient(45deg,#f7971e,#ffd200)"
+    "gradient": "linear-gradient(45deg,#f7971e,#ffd200)",
+    "description": "Moomoo.io - farm, gather resources, build a base, and survive.",
+    "platform": "Web, Android, iOS",
+    "genre": "Strategy, Survival",
+    "author": "MineFun Game Hub"
   },
   {
     "title": "Krunker.io",
@@ -69,15 +101,22 @@
     "thumbnail": "/images/krunker-io-cover.png",
     "rating": 4.6,
     "players": 4600,
-    "gradient": "linear-gradient(45deg,#ee0979,#ff6a00)"
+    "gradient": "linear-gradient(45deg,#ee0979,#ff6a00)",
+    "description": "Krunker.io - fast-paced first-person shooter with pixel graphics.",
+    "platform": "Web, Android, iOS",
+    "genre": "Shooter, Action",
+    "author": "MineFun Game Hub"
   },
-  
   {
     "title": "Agar.io",
     "link": "/game/agar-io/",
     "thumbnail": "/images/agar-io-cover.png",
     "rating": 4.1,
     "players": 9000,
-    "gradient": "linear-gradient(45deg,#43cea2,#185a9d)"
+    "gradient": "linear-gradient(45deg,#43cea2,#185a9d)",
+    "description": "Agar.io - grow your cell and survive by eating others.",
+    "platform": "Web, Android, iOS",
+    "genre": "Strategy, Multiplayer",
+    "author": "MineFun Game Hub"
   }
 ]

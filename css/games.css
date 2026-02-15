@@ -524,6 +524,9 @@ a: hover {
            
         }
 .video-container iframe {
+  width: 100%;
+  height: auto;
+  border-radius: 13px;
   aspect-ratio: 16 / 9;
 }
   

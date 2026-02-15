@@ -11,24 +11,25 @@ for game in games:
             soup = BeautifulSoup(f, 'html.parser')
 
         script_tag = soup.new_tag('script', type='application/ld+json')
-        script_tag.string = json.dumps({
-            "@context": "https://schema.org",
-            "@type": "VideoGame",
-            "name": game['title'],
-            "url": f"https://minefuniogame.github.io/{html_file}",
-            "image": f"https://minefuniogame.github.io{game['thumbnail']}",
-            "description": game.get('description', ''),
-            "genre": game.get('genre', 'Multiplayer'),
-            "author": {"@type": "Organization", "name": "MineFun Game Hub"},
-            "aggregateRating": {
-                "@type": "AggregateRating",
-                "ratingValue": str(game['rating']),
-                "ratingCount": str(game['players'])
-            },
-            "operatingSystem": game.get('platform', 'Web')
-        }, indent=2)
+script_tag.string = json.dumps({
+    "@context": "https://schema.org",
+    "@type": "VideoGame",
+    "name": game['title'],
+    "url": f"https://minefuniogame.github.io/{game['link'].lstrip('/')}",
+    "image": f"https://minefuniogame.github.io{game['thumbnail']}",
+    "description": game.get('description', ''),
+    "genre": game.get('genre', 'Multiplayer'),
+    "author": {"@type": "Organization", "name": "MineFun Game Hub"},
+    "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": str(game['rating']),
+        "ratingCount": str(game['players'])
+    },
+    "operatingSystem": game.get('platform', 'Web')
+}, indent=2)
 
-        soup.head.append(script_tag)
+soup.head.append(script_tag)
+
 
         with open(html_file + 'index.html', 'w', encoding='utf-8') as f:
             f.write(str(soup))

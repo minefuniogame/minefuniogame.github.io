@@ -14,8 +14,8 @@ document.addEventListener("DOMContentLoaded", () => {
       grid.innerHTML = '';
 
       for (const game of games) {
-        const rating = game.rating ?? 0;
-        const players = game.players ?? 0;
+        // const rating = game.rating ?? 0;
+        // const players = game.players ?? 0;
         const link = game.link || "#";
 
         const card = document.createElement('div');

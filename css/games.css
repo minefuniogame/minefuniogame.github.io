@@ -521,4 +521,5 @@ a: hover {
             border-radius: 10px;
             padding: 20px;
             border: 2px solid rgba(255, 107, 107, 0.3);
+           aspect-ratio: 16 / 9;
         }

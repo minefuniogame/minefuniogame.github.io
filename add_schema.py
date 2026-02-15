@@ -23,16 +23,18 @@ try:
 
             # Create enhanced schema for SEO
             schema_data = {
-                "@context": "https://schema.org",
-                "@type": "VideoGame",
-                "name": game["title"],
-                "url": f"https://minefuniogame.github.io{game['link']}",
-                "image": f"https://minefuniogame.github.io{game['thumbnail']}",
-                "description": game.get("description"),
-                "genre": game.get("genre", "Online Io Game"),
-                "platform": game.get("platform")
-                # "keywords": game.get("keywords")
-            }
+    "@context": "https://schema.org",
+    "@type": "VideoGame",
+    "name": game["title"],
+    "url": f"https://minefuniogame.github.io{game['link']}",
+    "image": f"https://minefuniogame.github.io{game['thumbnail']}",
+    "description": game.get("description", f"Play {game['title']} online for free."),
+    "genre": game.get("genre", ["Online Game", "Io"]),
+    "applicationCategory": "Game",
+    "operatingSystem": "Any",
+    "browserRequirements": "Requires HTML5 support",
+    "platform": game.get("platform", "Web Browser")
+}
 
             script_tag = soup.new_tag("script", type="application/ld+json")
             script_tag.string = json.dumps(schema_data, indent=2)
@@ -57,27 +59,20 @@ try:
             old_schema.decompose()
 
         # Build ItemList schema for homepage with description
-        itemlist_schema = {
-            "@context": "https://schema.org",
-            "@type": "ItemList",
-            "name": "Mine Fun IO",
-            "genre": "Multiplayer, Action, Io",
-            "url": "https://minefuniogame.github.io/",
-            "description": "Master Mine Fun Io with our ultimate guide. Learn mining strategies, and explore all game modes in this addictive voxel-based .io classic.",
-            "numberOfItems": len(games),
-            "itemListElement": [
-                {
-                    "@type": "VideoGame",
-                    "position": i+1,
-                    "name": game["title"],
-                    "url": f"https://minefuniogame.github.io{game['link']}",
-                    "description": game.get("description", ""),
-                    "genre": game.get("genre", "Online Io Game"),
-                    "platform": game.get("platform", "web")
-                }
-                for i, game in enumerate(games)
-            ]
-        }
+        itemlist_schema  = {
+    "@context": "https://schema.org",
+    "@type": "VideoGame",
+    "name": "MineFun.io",
+    "url": "https://minefuniogame.github.io/",
+    "image": "https://minefuniogame.github.io/images/minefuniogame-thumbnail-1.png",
+    "description": "",
+    "genre": "",
+    "applicationCategory": "Game",
+    "operatingSystem": "Any",
+    "browserRequirements": "Requires HTML5 support",
+    "platform": ""
+}
+
 
         script_tag = soup.new_tag("script", type="application/ld+json")
         script_tag.string = json.dumps(itemlist_schema, indent=2)

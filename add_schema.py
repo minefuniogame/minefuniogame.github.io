@@ -21,18 +21,17 @@ try:
             if old_schema:
                 old_schema.decompose()
 
-            # Create new schema
+            # Create enhanced schema for SEO
             schema_data = {
                 "@context": "https://schema.org",
                 "@type": "VideoGame",
                 "name": game["title"],
                 "url": f"https://minefuniogame.github.io{game['link']}",
                 "image": f"https://minefuniogame.github.io{game['thumbnail']}",
-                "aggregateRating": {
-                    "@type": "AggregateRating",
-                    "ratingValue": str(game["rating"]),
-                    "reviewCount": "100"
-                }
+                "description": game.get("description"),
+                "genre": game.get("category", "Online Game", "Io"),
+                "platform": game.get("platform"),
+                # "keywords": game.get("keywords")
             }
 
             script_tag = soup.new_tag("script", type="application/ld+json")
@@ -57,18 +56,28 @@ try:
         if old_schema:
             old_schema.decompose()
 
+        # Build ItemList schema for homepage with description
         itemlist_schema = {
-                "@context": "https://schema.org",
-                "@type": "VideoGame",
-                "name": "MineFun.io",
-                "url": "https://minefuniogame.github.io/",
-                "image": "https://minefuniogame.github.io/images/minefuniogame-thumbnail-1.png",
-                "aggregateRating": {
-                    "@type": "AggregateRating",
-                    "ratingValue": "l0",
-                    "reviewCount": "100"
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            "name": "Mine Fun IO",
+            "genre": "Multiplayer, Action, Io",
+            "url": "https://minefuniogame.github.io/",
+            "description": "Master Mine Fun Io with our ultimate guide. Learn mining strategies, and explore all game modes in this addictive voxel-based .io classic.",
+            "numberOfItems": len(games),
+            "itemListElement": [
+                {
+                    "@type": "VideoGame",
+                    "position": i+1,
+                    "name": game["title"],
+                    "url": f"https://minefuniogame.github.io{game['link']}",
+                    "description": game.get("description"),
+                    "genre": game.get("category", "Online Game"),
+                    "platform": game.get("platform")
                 }
-            }
+                for i, game in enumerate(games)
+            ]
+        }
 
         script_tag = soup.new_tag("script", type="application/ld+json")
         script_tag.string = json.dumps(itemlist_schema, indent=2)

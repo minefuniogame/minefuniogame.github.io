@@ -65,12 +65,12 @@ try:
     "name": "MineFun.io",
     "url": "https://minefuniogame.github.io/",
     "image": "https://minefuniogame.github.io/images/minefuniogame-thumbnail-1.png",
-    "description": "",
-    "genre": "",
+    "description": ""Master Mine Fun Io with our ultimate guide. Learn mining strategies, and explore all game modes in this addictive voxel-based .io classic.,
+    "genre": "Multiplayer, Action, Io, Strategy",
     "applicationCategory": "Game",
     "operatingSystem": "Any",
     "browserRequirements": "Requires HTML5 support",
-    "platform": ""
+    "platform": "Web, Android, iOS"
 }
 
 

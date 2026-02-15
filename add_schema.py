@@ -29,7 +29,7 @@ try:
                 "url": f"https://minefuniogame.github.io{game['link']}",
                 "image": f"https://minefuniogame.github.io{game['thumbnail']}",
                 "description": game.get("description"),
-                "genre": game.get("genre", "Online Game", "Io"),
+                "genre": game.get("genre", "Online Io Game"),
                 "platform": game.get("platform")
                 # "keywords": game.get("keywords")
             }
@@ -71,9 +71,9 @@ try:
                     "position": i+1,
                     "name": game["title"],
                     "url": f"https://minefuniogame.github.io{game['link']}",
-                    "description": game.get("description"),
-                    "genre": game.get("genre", "Online Game"),
-                    "platform": game.get("platform")
+                    "description": game.get("description", ""),
+                    "genre": game.get("genre", "Online Io Game"),
+                    "platform": game.get("platform", "web")
                 }
                 for i, game in enumerate(games)
             ]

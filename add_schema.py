@@ -30,7 +30,7 @@ try:
                 "image": f"https://minefuniogame.github.io{game['thumbnail']}",
                 "description": game.get("description"),
                 "genre": game.get("genre", "Online Game", "Io"),
-                "platform": game.get("platform"),
+                "platform": game.get("platform")
                 # "keywords": game.get("keywords")
             }
 

@@ -3,10 +3,8 @@
     "title": "MineFun.io",
     "link": "https://minefuniogame.github.io/",
     "thumbnail": "/images/minefuniogame-cover.png",
-    "rating": 4.7,
-    "players": 1800,
     "gradient": "linear-gradient(45deg,#7f7cff,#5ee7df)",
-    "description": "MineFun.io unblocked - play fun io games online.",
+    "description": "Master Mine Fun Io with our ultimate guide. Learn mining strategies, and explore all game modes in this addictive voxel-based .io classic.",
     "platform": "Web, Android, iOS",
     "genre": "Multiplayer, Action"
   },
@@ -14,108 +12,93 @@
     "title": "Diep.io",
     "link": "/game/diep-io/",
     "thumbnail": "/images/diep-io-cover.png",
-    "rating": 4.3,
-    "players": 3500,
     "gradient": "linear-gradient(45deg,#30cfd0,#330867)",
-    "description": "Diep.io - tank battles, survive and upgrade your tank.",
+    "description": "Play Diep.io and master tank evolution! Learn the best builds, class upgrades, and strategic combat tips in this definitive survival guide for the tank arena.",
     "platform": "Web, Android, iOS",
-    "genre": "Shooter, Strategy",
-    "author": "MineFun Game Hub"
+    "genre": "Shooter, Strategy"
   },
   {
     "title": "Paper.io 2",
     "link": "/game/paper-io-2/",
     "thumbnail": "/images/paper-io-2-cover.png",
-    "rating": 4.5,
-    "players": 5200,
     "gradient": "linear-gradient(45deg,#56ccf2,#2f80ed)",
-    "description": "Paper.io 2 - capture territory and outsmart your opponents.",
+    "description": "Play Paper.io 2 and dominate the arena! Learn top strategies, unlock skins, and expand your territory in this comprehensive 2500+ word master guide.",
     "platform": "Web, Android, iOS",
-    "genre": "Strategy, Multiplayer",
-    "author": "MineFun Game Hub"
+    "genre": "Strategy, Multiplayer"
   },
   {
     "title": "Bloxd.io",
     "link": "/game/bloxd-io/",
     "thumbnail": "/images/bloxd-io-cover.png",
-    "rating": 4.7,
-    "players": 1800,
     "gradient": "linear-gradient(45deg,#7f7cff,#5ee7df)",
-    "description": "Bloxd.io - build, survive, and fight in a fun online multiplayer game.",
+    "description": "Play Bloxd Io, the ultimate browser sandbox! Survival, BedWars, Creative, and Parkour modes await. Learn strategies, controls, and tips in our guide.",
     "platform": "Web, Android, iOS",
-    "genre": "Action, Strategy",
-    "author": "MineFun Game Hub"
+    "genre": "Action, Strategy"
   },
   {
     "title": "Voxiom.io",
     "link": "/game/voxiom-io/",
     "thumbnail": "/images/voxiom-io-cover.png",
-    "rating": 4.6,
-    "players": 1500,
     "gradient": "linear-gradient(45deg,#ff9966,#ff5e62)",
-    "description": "Voxiom.io - voxel shooter combining mining, building, and FPS combat.",
+    "description": "Play Voxiom.io, the ultimate voxel-based FPS and Battle Royale. Mine, craft, build, and shoot in a fully destructible world. Read our 2500+ word master guide!",
     "platform": "Web, Android, iOS",
-    "genre": "Shooter, Action",
-    "author": "MineFun Game Hub"
+    "genre": "Shooter, Action"
   },
   {
     "title": "Slither.io",
     "link": "/game/slither-io/",
     "thumbnail": "/images/slither-io-cover.png",
-    "rating": 0,
-    "players": 0,
     "gradient": "linear-gradient(45deg,#8360c3,#2ebf91)",
-    "description": "Slither.io - classic snake game with multiplayer battles online.",
+    "description": "Play Slither.io and become the longest snake! Learn pro strategies, how to boost effectively, and master the art of coiling in this comprehensive Slither.io guide.",
     "platform": "Web, Android, iOS",
-    "genre": "Arcade, Multiplayer",
-    "author": "MineFun Game Hub"
+    "genre": "Arcade, Multiplayer"
   },
   {
     "title": "Zombs.io",
     "link": "/game/zombs-io/",
     "thumbnail": "/images/zombs-io-cover.png",
-    "rating": 4.4,
-    "players": 2100,
     "gradient": "linear-gradient(45deg,#11998e,#38ef7d)",
     "description": "Zombs.io - build your base and defend it against zombies.",
     "platform": "Web, Android, iOS",
-    "genre": "Strategy, Survival",
-    "author": "MineFun Game Hub"
+    "genre": "Strategy, Survival"
   },
   {
     "title": "Moomoo.io",
     "link": "/game/moomoo-io/",
     "thumbnail": "/images/moomoo-io-cover.png",
-    "rating": 4.3,
-    "players": 1900,
     "gradient": "linear-gradient(45deg,#f7971e,#ffd200)",
-    "description": "Moomoo.io - farm, gather resources, build a base, and survive.",
+    "description": "Play MooMoo.io and build the ultimate base! Master resource gathering, age-based leveling, and base defense in this definitive 2500+ word survival guide.",
     "platform": "Web, Android, iOS",
-    "genre": "Strategy, Survival",
-    "author": "MineFun Game Hub"
+    "genre": "Strategy, Survival"
   },
   {
     "title": "Krunker.io",
     "link": "/game/krunker-io/",
     "thumbnail": "/images/krunker-io-cover.png",
-    "rating": 4.6,
-    "players": 4600,
     "gradient": "linear-gradient(45deg,#ee0979,#ff6a00)",
-    "description": "Krunker.io - fast-paced first-person shooter with pixel graphics.",
+    "description": "Play Krunker.io, the ultimate browser-based FPS. Master slide-hopping, classes, and strategies in our 2500+ word master guide. No download required!",
     "platform": "Web, Android, iOS",
-    "genre": "Shooter, Action",
-    "author": "MineFun Game Hub"
+    "genre": "Shooter, Action"
+
   },
   {
     "title": "Agar.io",
     "link": "/game/agar-io/",
     "thumbnail": "/images/agar-io-cover.png",
-    "rating": 4.1,
-    "players": 9000,
     "gradient": "linear-gradient(45deg,#43cea2,#185a9d)",
-    "description": "Agar.io - grow your cell and survive by eating others.",
+    "description": "Play Agar.io and become the ultimate cell! Learn the secrets of split-killing, virus tactics, and mass management in this definitive 2500+ word master guide.",
     "platform": "Web, Android, iOS",
-    "genre": "Strategy, Multiplayer",
-    "author": "MineFun Game Hub"
-  }
+    "genre": "Strategy, Multiplayer"
+
+  },
+  {
+  "title": "Vectaria.io",
+  "link": "/game/vectaria-io/",
+  "thumbnail": "/images/vectaria-io-cover.png",
+  "description": "Play Vectaria.io online! Experience the ultimate browser-based Minecraft clone. Master Survival, Creative, and Peaceful modes with our comprehensive 2026 player guide",
+  "genre": "Multiplayer, Sandbox, Survival, Adventure",
+  "platform": "Web, Android, iOS",
+  "gradient": "linear-gradient(45deg, #6a11cb, #2575fc)"
+}
+
 ]

@@ -1,37 +1,48 @@
 import json
+import os
 from bs4 import BeautifulSoup
 
-with open('games.json', 'r') as f:
+# Load games.json
+with open("js/games.json", "r", encoding="utf-8") as f:
     games = json.load(f)
 
 for game in games:
-    html_file = game['link'].lstrip('/')  # مثال: "game/diep-io/"
-    try:
-        with open(html_file + 'index.html', 'r', encoding='utf-8') as f:
-            soup = BeautifulSoup(f, 'html.parser')
+    slug = game["link"].replace("/game/", "").replace("/", "")
+    html_path = f"game/{slug}/index.html"
 
-        script_tag = soup.new_tag('script', type='application/ld+json')
-script_tag.string = json.dumps({
-    "@context": "https://schema.org",
-    "@type": "VideoGame",
-    "name": game['title'],
-    "url": f"https://minefuniogame.github.io/{game['link'].lstrip('/')}",
-    "image": f"https://minefuniogame.github.io{game['thumbnail']}",
-    "description": game.get('description', ''),
-    "genre": game.get('genre', 'Multiplayer'),
-    "author": {"@type": "Organization", "name": "MineFun Game Hub"},
-    "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": str(game['rating']),
-        "ratingCount": str(game['players'])
-    },
-    "operatingSystem": game.get('platform', 'Web')
-}, indent=2)
+    if os.path.exists(html_path):
 
-soup.head.append(script_tag)
+        with open(html_path, "r", encoding="utf-8") as file:
+            soup = BeautifulSoup(file, "html.parser")
 
+        # Remove old schema if exists
+        old_schema = soup.find("script", type="application/ld+json")
+        if old_schema:
+            old_schema.decompose()
 
-        with open(html_file + 'index.html', 'w', encoding='utf-8') as f:
-            f.write(str(soup))
-    except FileNotFoundError:
-        print(f"{html_file} not found, skipping.")
+        # Create new schema
+        schema_data = {
+            "@context": "https://schema.org",
+            "@type": "VideoGame",
+            "name": game["title"],
+            "url": f"https://minefuniogame.github.io{game['link']}",
+            "image": f"https://minefuniogame.github.io{game['thumbnail']}",
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": str(game["rating"]),
+                "reviewCount": "100"
+            }
+        }
+
+        script_tag = soup.new_tag("script", type="application/ld+json")
+        script_tag.string = json.dumps(schema_data, indent=2)
+
+        soup.head.append(script_tag)
+
+        with open(html_path, "w", encoding="utf-8") as file:
+            file.write(str(soup))
+
+        print(f"✅ Schema added to {html_path}")
+
+    else:
+        print(f"❌ File not found: {html_path}")

@@ -529,4 +529,12 @@ a: hover {
   border-radius: 13px;
   aspect-ratio: 16 / 9;
 }
+
+ .video-container h3,
+       {
+            margin-top: 0;
+            margin-bottom: 15px;
+            color: #ff6b6b;
+            font-size: 1.3em;
+        }
   

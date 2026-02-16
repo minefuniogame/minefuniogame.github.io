@@ -1,22 +1,36 @@
+name: Update Site (Sitemaps + Favicon)
+
+on:
+  push:
+    branches:
+      - main
+
 jobs:
-  build:
+  update-site:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      # 1️⃣ Checkout repo
+      - name: Checkout Repository
+        uses: actions/checkout@v3
 
+      # 2️⃣ Setup Python
       - name: Setup Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.x'
 
-      - name: Add favicon to all HTML files
-        run: python .github/scripts/add_favicon.py
+      # 3️⃣ Generate sitemaps and add favicon
+      - name: Generate Sitemaps & Add Favicon
+        run: |
+          python .github/scripts/generate_sitemap.py
+          python .github/scripts/add_favicon.py
 
+      # 4️⃣ Commit changes
       - name: Commit changes
         run: |
           git config user.name "github-actions"
           git config user.email "actions@github.com"
           git add .
-          git commit -m "Add favicon to all HTML" || echo "No changes"
+          git commit -m "Update sitemaps and add favicon" || echo "No changes"
           git push

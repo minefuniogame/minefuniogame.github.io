@@ -1,48 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-  <url>
-    <loc>https://minefuniogame.github.io/</loc>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://minefuniogame.github.io/game/agar-io/</loc>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://minefuniogame.github.io/game/bloxd-io/</loc>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://minefuniogame.github.io/game/diep-io/</loc>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://minefuniogame.github.io/game/krunker-io/</loc>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://minefuniogame.github.io/game/moomoo-io/</loc>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://minefuniogame.github.io/game/paper-io-2/</loc>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://minefuniogame.github.io/game/slither-io/</loc>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://minefuniogame.github.io/game/vectaria-io/</loc>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://minefuniogame.github.io/game/voxiom-io/</loc>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://minefuniogame.github.io/game/zombs-io/</loc>
-    <priority>0.8</priority>
-  </url>
-</urlset>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <sitemap>
+    <loc>https://minefuniogame.github.io//sitemap-games.xml</loc>
+    <lastmod>2026-02-16</lastmod>
+  </sitemap>
+</sitemapindex>

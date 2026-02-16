@@ -1,7 +1,7 @@
 import os
 from datetime import date
 
-BASE_URL = "https://minefuniogame.github.io/"
+BASE_URL = "https://minefuniogame.github.io"
 
 today = date.today().isoformat()
 

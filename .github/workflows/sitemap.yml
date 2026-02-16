@@ -1,4 +1,4 @@
-name: Auto Sitemap
+name: Generate Sitemap
 
 on:
   push:
@@ -6,15 +6,24 @@ on:
       - main
 
 jobs:
-  sitemap:
+  build:
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-      - run: node generate-sitemap.js
-      - run: |
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Run sitemap script
+        run: python generate_sitemap.py
+
+      - name: Commit sitemap
+        run: |
           git config user.name "github-actions"
           git config user.email "actions@github.com"
-          git add sitemap.xml
-          git commit -m "Update sitemap" || echo "No changes"
+          git add sitemap.xml sitemap-games.xml
+          git commit -m "Update sitemaps" || echo "No changes"
           git push

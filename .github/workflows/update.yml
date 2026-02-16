@@ -23,7 +23,7 @@ jobs:
       # 3️⃣ Generate sitemaps and add favicon
       - name: Generate Sitemaps & Add Favicon
         run: |
-          python .github/scripts/generate_sitemap.py
+          
           python .github/scripts/add_favicon.py
 
       # 4️⃣ Commit changes

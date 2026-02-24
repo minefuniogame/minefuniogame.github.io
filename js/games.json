@@ -99,6 +99,15 @@
   "genre": "Multiplayer, Sandbox, Survival, Adventure",
   "platform": "Web, Android, iOS",
   "gradient": "linear-gradient(45deg, #6a11cb, #2575fc)"
+},
+  {
+  "title": "Venge.io",
+  "link": "/game/venge-io/",
+  "thumbnail": "/images/venge-io-cover.png",
+  "description": "Play Venge.io online! Dominate the arena in this intense browser FPS. Master the card system, capture points, and unlock weapon skins in our 2026 tactical guide.",
+  "genre": "Shooter, FPS, Multiplayer, Action",
+  "platform": "Web, Android, iOS",
+  "gradient": "radial-gradient(circle, #f7971e, #ffd200)"
 }
 
 ]
